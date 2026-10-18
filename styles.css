@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* recommended addition */
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.container {
+  border-radius: var(--radius-md);
+  margin: var(--space-lg);
+  padding: var(--space-md) var(--space-lg);
+  width: 100%;
+  height: 100%;
+  max-height: 600px;
+  background: var(--surface-primary);
+}
+
+.buduCode,
+.output {
+  width: 100%;
+  height: 90%;
+  background: var(--surface-secondary);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  padding: var(--space-sm);
+  margin-top: var(--space-sm);
+  overflow: auto;
+  outline: none;
+  resize: none;
+  transition: border var(--transition-slow);
+}
+
+.buduCode:focus, .buduCode:hover {
+  border-color: var(--primary); /* cleaner than rewriting the full border */
+}
+.tag {
+      padding: var(--space-sm);
+      border: 1px solid var(--border-primary);
+      color: var(--primary);
+      border-radius: var(--radius-sm);
+      background: var(--bg-primary);
+}
+
+@media (max-width: 800px) {
+      main {
+            flex-wrap: wrap;
+      }
+}
