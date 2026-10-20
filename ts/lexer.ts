@@ -44,5 +44,22 @@ export function lexer(text: string): Tokens[] {
     });
   });
 
+  
   return ids;
+}
+
+/**
+ * @param words - An array of strings
+ */
+
+function printValue(words: string[]) {
+      let valueToPrint: string = "";
+
+if(words[0] === "voice" && words.length === 2) {
+      valueToPrint = words[1];
+} else {
+      throw new Error("Value to be printed must be one")
+}
+
+return valueToPrint;
 }

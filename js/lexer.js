@@ -37,4 +37,17 @@ export function lexer(text) {
     });
     return ids;
 }
+/**
+ * @param words - An array of strings
+ */
+function printValue(words) {
+    let valueToPrint = "";
+    if (words[0] === "voice" && words.length === 2) {
+        valueToPrint = words[1];
+    }
+    else {
+        throw new Error("Value to be printed must be one");
+    }
+    return valueToPrint;
+}
 //# sourceMappingURL=lexer.js.map

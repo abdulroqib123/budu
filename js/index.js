@@ -6,10 +6,14 @@ buduCode.focus();
 runBtn.addEventListener("click", () => {
     const code = buduCode.value;
     const values = lexer(code);
-    output.textContent = values
+    output.innerHTML = "";
+    const text = document.createElement("p");
+    text.classList.add("typing");
+    text.textContent = values
         .map((v) => `{
             ${v.type} ${v.value}
       }`)
         .join("");
+    output.appendChild(text);
 });
 //# sourceMappingURL=index.js.map
