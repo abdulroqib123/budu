@@ -31,7 +31,12 @@ main {
   max-height: 95%;
   background: var(--surface-primary);
 }
-
+.inputContainer {
+  margin-right: var(--space-sm);
+}
+.outputContainer {
+  margin-left: var(--space-sm);
+}
 .buduCode,
 .output {
   width: 100%;
@@ -51,6 +56,12 @@ main {
 .buduCode:focus, .buduCode:hover {
   border-color: var(--primary); /* cleaner than rewriting the full border */
 }
+.containerHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-sm);
+}
 .tag {
       padding: var(--space-sm);
       border: 1px solid var(--border-primary);
@@ -58,9 +69,25 @@ main {
       border-radius: var(--radius-sm);
       background: var(--bg-secondary);
 }
-
+.btnPrimary {
+  background: var(--success);
+}
+.btnPrimary:hover, .btnPrimary:active {
+  background: color-mix(in srgb, var(--success) 10%, var(--success) 60%);
+}
 @media (max-width: 800px) {
       main {
             flex-wrap: wrap;
       }
+      .container {
+        max-height: 500px;
+      }
+      .inputContainer {
+        margin-right: var(--space-lg);
+  margin-bottom: var(--space-sm);
+}
+.outputContainer {
+        margin-left: var(--space-lg);
+  margin-top: var(--space-sm);
+}
 }
